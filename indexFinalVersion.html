@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- 
+    Updated By Marco Rebelo
+    Date: 19/04/2025 
+    -->
+
+    <link rel="icon" href="imgs/sps_icon_logo.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2024 Cycle 2 IEEE SPS Chapter Initiative on Multimedia Signal Processing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #27ae60;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --container-width: 1200px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .navbar-brand {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('imgs/banner_leiria.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            color: var(--primary-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Buttons */
+        .btn-custom {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .btn-custom:hover {
+            background-color: #219653;
+            transform: translateY(-2px);
+        }
+
+        /* Cards */
+        .card-custom {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Speaker Cards */
+        .speaker-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .speaker-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .speaker-content {
+            padding: 1.5rem;
+        }
+
+        /* Tables */
+        .table-custom {
+            width: 100%;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .table-custom th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .table-custom td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Sections */
+        .section-padding {
+            padding: 4rem 0;
+        }
+
+        .bg-light {
+            background-color: var(--light-bg);
+        }
+
+        /* Grid System */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -1rem;
+        }
+
+        .col-12 {
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        .col-md-5 {
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        .col-lg-6 {
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        .col-lg-8 {
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        .mx-auto {
+            margin: 0 auto;
+        }
+
+        /* Text Utilities */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-success {
+            color: var(--secondary-color);
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .mb-5 {
+            margin-bottom: 3rem;
+        }
+
+        /* Alerts */
+        .alert {
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .alert-warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+
+        .alert-info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .navbar .container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .col-md-5 {
+                width: 50%;
+            }
+
+            .col-lg-6 {
+                width: 50%;
+            }
+
+            .col-lg-8 {
+                width: 66.666%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 60vh;
+            }
+
+            .hero-content {
+                margin: 0 1rem;
+            }
+
+            .table-custom {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        /* Sponsors Section */
+        .sponsors-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .sponsor-img {
+            max-height: 80px;
+            transition: filter 0.3s ease;
+        }
+
+        .sponsor-img:hover {
+            filter: brightness(1.1);
+        }
+
+        /* Session Containers */
+        .session-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .session-alert {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        .session-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .session-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .session-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .session-card h5 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .session-card .btn-custom {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* Organizers and Sponsors Section */
+        .organizers-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: stretch;
+        }
+
+        .organizers-col, .sponsors-col {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .organizers-card, .sponsors-card {
+            flex: 1;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            height: 100%;
+        }
+
+        .sponsors-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            gap: 1.5rem;
+            height: 100%;
+        }
+
+        .sponsor-img {
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+            transition: filter 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">IEEE SPS Student Branch Chapter Leiria</a>
+            <a class="navbar-brand" href="mailto:contact@mmspleiria2024.pt">
+                <i class="fas fa-envelope"></i> contact@mmspleiria2024.pt
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>2024 Cycle 2 IEEE SPS Chapter Initiative on Multimedia Signal Processing</h1>
+                <p>IEEE SPS Student Branch Chapter Leiria</p>
+                <p>October 23rd, 2024</p>
+                <div>
+                    <a href="#program" class="btn-custom">Program</a>
+                    <a href="#posters" class="btn-custom">Posters</a>
+                    <a href="https://forms.gle/D12ZuZWnaddW3Zst8" class="btn-custom">
+                        Register Here
+                        <small>[Online Participation]</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="information">
+        <div class="container">
+            <h2 class="text-center mb-5">Information</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="mb-4">Join us in for the 2024 Cyle 2 Chapter Initiative on Multimedia Signal Processing,
+                        organized by IEEE SPS Student Branch Chapter of the Polytechnic of Leiria and the IEEE SPS Chapter
+                        Portugal, sponsored through a Membership Driven Initiative from the Signal Processing Society (SPS).
+                        This event is designed to unite the Signal Processing community in Portugal, creating a platform for
+                        collaboration and knowledge exchange.</p>
+                    <p class="mb-4">Join us for a dynamic lineup featuring insightful talks from seasoned professors and
+                        leading researchers alongside presentations from talented PhD students. Explore the latest advancements
+                        in multimedia signal processing and engage fruitful discussions and networking.</p>
+                    <p class="mb-4">If you are a PhD or MSc student bring a poster with your recent work and discuss your
+                        ideas with the members of our community.</p>
+                    <p class="mb-4">This event offers a unique opportunity for everyone to find out the latest trends in
+                        multimedia signal processing, to connect and share ideas.</p>
+                    <p class="mb-5">We look forward to welcoming you at Leiria!</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="card-custom">
+                        <h4 class="text-center text-success mb-4">Targeted Audience</h4>
+                        <p class="text-center">Students (graduate and senior undergraduate), post-doctorate
+                            researchers, lecturers, and professors.</p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card-custom">
+                        <h4 class="text-center text-success mb-4">Venue</h4>
+                        <p>The event will take place at the School of Technology and
+                            Management, Polythecnic of Leiria, Building B, Auditorium 2.</p>
+                        <div class="text-center" style="margin-top: 10px;">
+                            <a href="https://maps.app.goo.gl/LaaAsuqvNaHz94c89" class="btn-custom">
+                                <i class="fas fa-map-marker-alt"></i> View Location
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light" id="program">
+        <div class="container">
+            <h2 class="text-center mb-5">Program</h2>
+            <div class="session-container">
+                <div class="session-alert">
+                    <i class="fas fa-clock"></i> All lectures and activities are set to happen in GMT+1 (Portugal time zone).
+                </div>
+                <div class="session-row">
+                    <div class="session-card">
+                        <h5>Morning Session</h5>
+                        <a href="https://videoconf-colibri.zoom.us/j/93948549587?pwd=oOgS6H2ZhYc6x90Za2TYBwgJddVoG1.1" class="btn-custom">
+                            <i class="fas fa-video"></i> Join Morning Session
+                        </a>
+                    </div>
+                    <div class="session-card">
+                        <h5>Afternoon Session</h5>
+                        <a href="https://videoconf-colibri.zoom.us/j/93441477906?pwd=3808oAVebntEi5XEmQ5dv1C95HukD0.1" class="btn-custom">
+                            <i class="fas fa-video"></i> Join Afternoon Session
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-custom">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Activity</th>
+                            <th>Speakers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>9h30</b></td>
+                            <td>Opening and SPS Overview</td>
+                            <td>Lucas Thomaz and Nuno Rodrigues, IPL-IT</td>
+                        </tr>
+                        <tr>
+                            <td><b>10h</b></td>
+                            <td>"Trends on Image and Video Coding Standardization"</td>
+                            <td>Fernando Pereira, IST-IT</td>
+                        </tr>
+                        <tr>
+                            <td><b>10h30</b></td>
+                            <td>"Visual Quality Assessment: Current Practices and Challenges"</td>
+                            <td>António Pinheiro, UBI-IT</td>
+                        </tr>
+                        <tr>
+                            <td><b>11h</b></td>
+                            <td><i>Coffee break (with posters)</i></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><b>11h45</b></td>
+                            <td>"Learning-based Point Cloud Coding"</td>
+                            <td>Nuno Rodrigues, IPL-IT</td>
+                        </tr>
+                        <tr>
+                            <td><b>12h15</b></td>
+                            <td>"Emerging 3D Representation Models: NeRFs and Splatting"</td>
+                            <td>André Guarda, IT</td>
+                        </tr>
+                        <tr>
+                            <td><b>12h45</b></td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <div class="p-2">PhD Students Spotlight</div>
+                                    <div class="p-2">"Point Cloud Geometry
+                                        Coding with Relational Neighborhood Self-Attention"</div>
+                                    <div class="p-2">"Machine Learning
+                                        Approaches for Complexity-Aware UHD 360° Video Coding"</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <div class="p-2">&nbsp;</div>
+                                    <div class="p-2">Mohammadreza Ghafari, IST-IT</div>
+                                    <div class="p-2">José Filipe, UA-IT</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>13h15</b></td>
+                            <td><i>Lunch</i></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><b>14h15</b></td>
+                            <td>"Light Field Coding: Past, Present and Future"</td>
+                            <td>Eduardo da Silva, UFRJ</td>
+                        </tr>
+                        <tr>
+                            <td><b>14h45</b></td>
+                            <td>"Light Field Processing for Immersive Systems"</td>
+                            <td>Paulo Nunes, ISCTE-IT</td>
+                        </tr>
+                        <tr>
+                            <td><b>15h15</b></td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <div class="p-2">PhD Students Spotlight</div>
+                                    <div class="p-2">"Light Field Geometry
+                                        Modeling: Disparity Estimation and Compression"</div>
+                                    <div class="p-2">"Wavelet-enhanced transformer for event-based video reconstruction"</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <div class="p-2">&nbsp;</div>
+                                    <div class="p-2">Rui Lourenço, UFRJ-IT</div>
+                                    <div class="p-2">Ramna Maqsood, ISCTE-IT</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>15h45</b></td>
+                            <td><i>Coffee break (with posters)</i></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><b>16h30</b></td>
+                            <td>"Biometrics: Making Sure It Is You"</td>
+                            <td>Paulo Correia, IST-IT</td>
+                        </tr>
+                        <tr>
+                            <td><b>17h</b></td>
+                            <td>"Medical Imaging: Coding and Processing"</td>
+                            <td>Sérgio Faria, IPL-IT</td>
+                        </tr>
+                        <tr>
+                            <td><b>17h30</b></td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <div class="p-2">PhD Students Spotlight</div>
+                                    <div class="p-2">"Medical Image Quality
+                                        Assessment"</div>
+                                    <div class="p-2">"Efficient Pairwise
+                                        Comparison Methodologies for Subjective Quality Assessment"</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <div class="p-2">&nbsp;</div>
+                                    <div class="p-2">Rafael Rodrigues, UBI-IT</div>
+                                    <div class="p-2">Shima Mohammadi, IST-IT</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>18h</b></td>
+                            <td><i>Cocktail</i></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><b>19h</b></td>
+                            <td><i>Closing</i></td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="speakers">
+        <div class="container">
+            <h2 class="text-center mb-5">Speakers</h2>
+            <div class="row">
+                <!-- Speaker 1 -->
+                <div class="col-12 mb-4">
+                    <div class="speaker-card">
+                        <div class="speaker-header">
+                            <h3 class="speaker-title">Trends on Image and Video Coding Standardization</h3>
+                            <h4 class="speaker-name">Fernando Pereira</h4>
+                            <p class="speaker-affiliation">Instituto Superior Técnico / Instituto de Telecomunicações</p>
+                        </div>
+                        <div class="speaker-content">
+                            <div class="speaker-abstract">
+                                <h3>Abstract</h3>
+                                <p style="margin-top: 5px;">Visual communications have a fundamental role in Human societies. In the digital era, this has led to the explosion of image and video-based applications and services, notably following the democratization of image and video acquisition, storage and streaming. However, conventional image and video-based experiences are far from the real-world immersion; this has motivated a rush for more realistic, immersive and interactive visual experiences, notably offering 6-DoF (Degrees-Of-Freedom) experiences where the user is free to exploit the six translational and rotational types of motion, possible in the real world.</p>
+                                <p>Recent years have seen a growing wave of data driven algorithms, such as deep neural networks, which have taken a lead role in many research and development areas, especially in multimedia. This interest is driven by several factors, notably advances in processing power, availability of large data sets, and algorithmic advances. Deep learning (DL)-based solutions are the state-of-the-art for multiple computer vision tasks, both high- and low-level. These advances have led to the exploitation of DL-based tools in the visual coding domain, reaching competitive performance in a short time.</p>
+                                <p>The potential of this type of coding approach has been recognized by JPEG and MPEG which have already developed DL-based coding standards, and more are coming. These standards demonstrate that, after many years of developments and advances with hand-crafted coding tools, the visual coding landscape is facing a revolution with the emergence of DL-based technology, which has the potential to unify several visual modalities under the same technological umbrella, offering compressed visual representations able to simultaneously and effectively serving humans and machines. In this context, this talk will address the recent trends on image and video coding standardization.</p>
+                            </div>
+                            <div class="speaker-bio">
+                                <h3 style="margin-top: 10px;">Bio</h3>
+                                <p style="margin-top: 5px;">FERNANDO PEREIRA (Fellow, IEEE) is currently a Professor with the Department of Electrical and Computers Engineering, Instituto Superior Técnico, Universidade de Lisboa, and a Senior Researcher with the Instituto de Telecomunicações, Lisbon, Portugal. He was an IEEE Distinguished Lecturer, in 2005, and elected as an IEEE Fellow, in 2008, for contributions to object-based digital video representation technologies and standards. Since 2013, he has also been a EURASIP Fellow for contributions to digital video representation technologies and standards.</p>
+                                <p>He is/has been a member of the Scientific and Program Committees of many international conferences and workshops. He has been elected to serve on the Signal Processing Society Board of Governors in the capacity of Member-at-Large for the 2012 and 2014-2016 term. He has served as the SPS Vice-President for Conferences during the 2018-2020 term. In 2024 he received the IEEE SPS Leo L. Beranek Meritorious Service Award. From 2013 to 2015, he was the Editor-in-Chief of the IEEE JOURNAL OF SELECTED TOPICS IN SIGNAL PROCESSING. He has contributed more than 300 articles in international journals, conferences, and workshops, and made several tens of invited talks at conferences and workshops.</p>
+                                <p>He has participated in the MPEG standardization activities, notably as Requirements Sub-group Chair, and the Chair of many Ad Hoc Groups related to the MPEG-4 and MPEG-7 standards. Since February 2016, he has been the JPEG Requirements Sub-group Chair. His research interests include visual data analysis, coding, description, adaptation, quality assessment, and advanced multimedia services.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker 2 -->
+                <div class="col-12 mb-4">
+                    <div class="speaker-card">
+                        <div class="speaker-header">
+                            <h3 class="speaker-title">Visual Quality Assessment: Current Practices and Challenges</h3>
+                            <h4 class="speaker-name">António Pinheiro</h4>
+                            <p class="speaker-affiliation">University of Beira Interior / Instituto de Telecomunicações</p>
+                        </div>
+                        <div class="speaker-content">
+                            <div class="speaker-abstract">
+                                <h3>Abstract</h3>
+                                <p style="margin-top: 5px;">The recent developments on high-quality equipment for images and video visualization created a general demand for novel models of quality assessment. Typically, image and video representation methods use lossy compression models that produce visible distortions, which affect the perceived experience. For the quality evaluation of such distortions, subjective quality evaluations are usually conducted, followed by the adoption of objective metrics validated upon the subjective evaluations.</p>
+                                <p>A generic description of the current quality assessment methodologies will be given, and some limitations will be identified. Those limitations are the basis of current research on visual quality assessment, leading to new subjective quality evaluation approaches that target near-visually lossless distortion evaluation or models for quality evaluation of immersive and 3D visual data. Current challenges will be identified.</p>
+                            </div>
+                            <div class="speaker-bio">
+                                <h3 style="margin-top: 10px;">Bio</h3>
+                                <p style="margin-top: 5px;">Antonio Pinheiro is an Associate Professor at UBI (Universidade da Beira Interior), and a researcher at IT (Instituto de Telecomunicações), Portugal. He received the "Licenciatura" from IST, Lisbon in 1988 and the PhD in Electronic Systems Eng. from University of Essex in 2002. Currently, his research interests are on Multimedia Quality Evaluation and Emerging 3D Imaging Technologies. He is a Portuguese delegate to ISO/IEC JTC1/SC29 and the Communication Subgroup chair of JPEG. He was host of the 100th JPEG meeting. He is Associate editor of IEEE Trans. on Multimedia, member of the IEEE SPS MMSP TC, and a senior member of IEEE.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue with other speakers in the same format -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light" id="posters">
+        <div class="container">
+            <h2 class="text-center mb-5">Posters</h2>
+            <div class="alert alert-info mb-4">
+                <i class="fas fa-info-circle"></i> Poster dimensions <strong>841 x 1189 mm</strong> (A0), Portrait Orientation
+            </div>
+            <div class="table-responsive">
+                <table class="table table-custom">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>"Non-separable Wavelet Transforms for Image compression based on Convolutional Neural Networks"</td>
+                            <td>João Parracho, UFRJ-IT</td>
+                        </tr>
+                        <tr>
+                            <td>"Double Deep Learning-based Event Data Coding and Classification"</td>
+                            <td>Abdelrahman Seleem, IST-IT</td>
+                        </tr>
+                        <tr>
+                            <td>"NeRF View Synthesis: Subjective Quality Assessment and Objective Metrics Evaluation"</td>
+                            <td>Pedro Martin, IST-IT</td>
+                        </tr>
+                        <tr>
+                            <td>"Light field view synthesis using deformable convolutional neural networks"</td>
+                            <td>Muhammad Zubair, ISCTE-IT</td>
+                        </tr>
+                        <tr>
+                            <td>"Quality Evaluation of Point Cloud Coding Solutions"</td>
+                            <td>João Prazeres, UBI-IT</td>
+                        </tr>
+                        <tr>
+                            <td>"Computer-aided diagnosis of collagen VI-related myopathy"</td>
+                            <td>Rafael Rodrigues, UBI-IT</td>
+                        </tr>
+                        <tr>
+                            <td>"Light Field Compression and View Synthesis: An Objective Quality Analysis"</td>
+                            <td>Daniela Saraiva, UBI-IT</td>
+                        </tr>
+                        <tr>
+                            <td>"Multi Focus Image Fusion Coding: A comparison between fusion coded image and coded images fusion"</td>
+                            <td>Marta Peraboa, UBI-IT</td>
+                        </tr>
+                        <tr>
+                            <td>"Impact of LiDAR point cloud compression on 3D object detection"</td>
+                            <td>Nuno Martins, UC-IT</td>
+                        </tr>
+                        <tr>
+                            <td>"Enhancing Learning-Based Cross-Modality Prediction for Lossless Medical Imaging Compression"</td>
+                            <td>Daniel Nicolau, IPL-IT</td>
+                        </tr>
+                        <tr>
+                            <td>"Explainable Prototype-based Image Classification using Adaptive Feature Extractors in Medical Images"</td>
+                            <td>Nicolas Vasconcellos, IPL-IT</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="organizers">
+        <div class="container">
+            <div class="organizers-row">
+                <div class="organizers-col">
+                    <h3 class="mb-4">Organizers</h3>
+                    <div class="organizers-card" style="display: flex; flex-direction: column; justify-content: space-around; align-items: center;">
+                        <p class="mb-2" style="text-align: center;">
+                            <strong>Prof. Lucas Thomaz (IT-IPLeiria)</strong><br>
+                            <a href="mailto:lucas.thomaz@co.it.pt">lucas.thomaz@co.it.pt</a>
+                        </p>
+                        <p class="mb-2" style="text-align: center;">
+                            <strong>Prof. Fernando Pereira (IT-IST)</strong><br>
+                            <a href="mailto:fp@lx.it.pt">fp@lx.it.pt</a>
+                        </p>
+                        <p class="mb-0" style="text-align: center;">
+                            <strong>Nicolas Vasconcellos (IT-IPLeiria)</strong><br>
+                            <a href="mailto:nicolas.vasconcellos@co.it.pt">nicolas.vasconcellos@ieee.org</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="sponsors-col">
+                    <h3 class="mb-4">Sponsors and Support</h3>
+                    <div class="sponsors-card">
+                        <div class="sponsors-container">
+                            <img src="imgs/logo2.png" alt="Signal Processing Society Logo" class="sponsor-img">
+                            <img src="imgs/logo2_portugal.png" alt="Signal Processing Society Logo Portugal" class="sponsor-img">
+                            <img src="imgs/logo1.png" alt="ESTG Logo" class="sponsor-img">
+                            <img src="imgs/logo3.png" alt="IEEE Logo" class="sponsor-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row" style="display: flex; justify-content: space-around;">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <a href="index.html">Home</a> | 
+                    <a href="policies.html">Event Policies</a> | 
+                    <a href="https://www.ieee.org/security-privacy.html">IEEE Privacy Policy</a> | 
+                    <a href="https://www.ieee.org/about/help/site-terms-conditions.html">Terms</a>
+                </div>
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    © 2024 - All rights reserved.
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    Template by Amanda Foligne
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
