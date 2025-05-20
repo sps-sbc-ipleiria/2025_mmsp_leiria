@@ -4,7 +4,7 @@
 <head>
     <!-- 
     Updated By Marco Rebelo
-    Date: 19/04/2025 
+    Date: 19/05/2025 
     -->
 
     <link rel="icon" href="imgs/sps_icon_logo.png">
@@ -284,6 +284,7 @@
         }
 
         @media (max-width: 768px) {
+            
             .hero-section {
                 min-height: 60vh;
             }
@@ -413,11 +414,57 @@
             transition: filter 0.3s ease;
         }
         .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+
+         @media (max-width: 490px) {
+            .navbar {
+                background-color: var(--primary-color);
+                padding: 1rem 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;  
+            }
+            .hero-section {
+                min-height: 60vh;
+            }
+
+            .hero-content {
+                margin: 0 1rem;
+            }
+
+            .table-custom {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+        @media (max-width: 400px) {
+            .navbar {
+                background-color: var(--primary-color);
+                padding: 1rem 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;  
+            }
+            .navbar-brand {
+                text-size-adjust: 80%;
+            }
+            .hero-section {
+                min-height: 60vh;
+            }
+
+            .hero-content {
+                margin: 0 1rem;
+            }
+
+            .table-custom {
+                display: block;
+                overflow-x: auto;
+            }
+        }
     </style>
 </head>
 
@@ -437,7 +484,7 @@
                 <p>IEEE SPS Student Branch Chapter IPLeiria</p>
                 <p>28 de maio, 2025</p>
                 <h2 style="gap: 1rem">Regista-te já e garante o teu lugar!</h2>
-                <div style="display: flex; justify-content: center; align-items: center; height: 150px; flex-wrap: wrap;">
+                <div style="display: flex; justify-content: center; align-items: center;  flex-wrap: wrap;">
                     <!-- <a href="#program" class="btn-custom">Programa</a> -->
                     <!-- <a href="#workshop" class="btn-custom">Workshop</a> -->
                     <a href="https://forms.gle/yMggWuhweAWwCjaS7" class="btn-custom">Registo para
